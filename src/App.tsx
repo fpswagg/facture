@@ -1,4 +1,5 @@
 // Third-party dependencies
+import { Analytics } from "@vercel/analytics/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useMemo, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
@@ -138,6 +139,7 @@ const App = () => {
 
   return (
     <div className="appRoot">
+      <Analytics />
       <header className="appHeader noPrint">
         <div>
           <p className="wordmark">{t("app.wordmark")}</p>
