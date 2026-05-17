@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "i18next": "^26.2.0",
     "qrcode.react": "^4.2.0",
