@@ -1,0 +1,42 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .noPrint {
+    display: none !important;
+  }
+
+  .appRoot {
+    padding: 0;
+    background: #fff;
+  }
+
+  .appGrid {
+    display: block;
+  }
+
+  .previewPane {
+    width: 100%;
+  }
+
+  .printPanel {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .invoicePreview {
+    border: 0;
+    background: #fff;
+  }
+
+  tr {
+    break-inside: avoid;
+  }
+}
