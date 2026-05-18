@@ -37,6 +37,8 @@ interface LegacyFormValues {
   notes?: string;
   terms?: string;
   paymentDetails?: string;
+  showClientSignature?: boolean;
+  showMySignature?: boolean;
 }
 
 const migrateLine = (line: LegacyLineItem): LineItemInput => {
@@ -76,6 +78,8 @@ const migrateFormValues = (legacy: LegacyFormValues): InvoiceFormValues => {
     notes: legacy.notes ?? "",
     terms: legacy.terms ?? "",
     paymentDetails: legacy.paymentDetails ?? "",
+    showClientSignature: legacy.showClientSignature ?? false,
+    showMySignature: legacy.showMySignature ?? false,
   };
 };
 

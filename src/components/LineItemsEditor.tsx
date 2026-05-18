@@ -83,6 +83,22 @@ const addChildById = (
     };
   });
 
+const clearChildrenById = (
+  items: LineItemInput[],
+  targetId: string,
+  preservedAmount: number,
+): LineItemInput[] =>
+  items.map((item) => {
+    if (item.id === targetId) {
+      return { ...item, amount: preservedAmount, children: [] };
+    }
+
+    return {
+      ...item,
+      children: clearChildrenById(item.children, targetId, preservedAmount),
+    };
+  });
+
 const moveInArray = (
   items: LineItemInput[],
   targetId: string,
@@ -187,6 +203,17 @@ const LineRow = ({
         </td>
         <td>
           <div className="lineActionGroup">
+            {hasChildren ? (
+              <button
+                type="button"
+                onClick={() =>
+                  onChange(clearChildrenById(rootItems, line.id, calcLine?.total ?? 0))
+                }
+                aria-label={t("a11y.clearChildren")}
+              >
+                {t("lineItems.clearChildren")}
+              </button>
+            ) : null}
             <button
               type="button"
               onClick={() => onChange(duplicateById(rootItems, line.id))}

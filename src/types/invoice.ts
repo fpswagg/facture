@@ -26,6 +26,8 @@ export interface InvoiceFormValues {
   notes: string;
   terms: string;
   paymentDetails: string;
+  showClientSignature: boolean;
+  showMySignature: boolean;
 }
 
 export interface CalculatedLineItem {
@@ -64,6 +66,8 @@ export const createInvoiceFormSchema = (t: TFunction) =>
       notes: z.string().trim(),
       terms: z.string().trim(),
       paymentDetails: z.string().trim(),
+      showClientSignature: z.boolean(),
+      showMySignature: z.boolean(),
     })
     .refine((data) => !data.showDueDate || data.dueDate.length > 0, {
       message: t("validation.dueDateRequired"),

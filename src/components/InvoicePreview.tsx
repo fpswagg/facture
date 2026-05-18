@@ -112,6 +112,27 @@ export const InvoicePreview = ({
         </article>
       </section>
 
+      {formValues.showClientSignature || formValues.showMySignature ? (
+        <section className="signatureGrid">
+          {formValues.showClientSignature ? (
+            <article className="signatureBlock">
+              <div className="signatureLine" />
+              <p className="signatureLabel">
+                {formValues.showClient && formValues.clientName
+                  ? formValues.clientName
+                  : t("preview.clientSignature")}
+              </p>
+            </article>
+          ) : null}
+          {formValues.showMySignature ? (
+            <article className="signatureBlock">
+              <div className="signatureLine" />
+              <p className="signatureLabel">{formValues.fromName || t("preview.mySignature")}</p>
+            </article>
+          ) : null}
+        </section>
+      ) : null}
+
       <footer className="invoiceFooter">
         <div className="footerDetails">
           {formValues.paymentDetails ? (

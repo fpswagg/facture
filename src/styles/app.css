@@ -510,6 +510,30 @@ tbody td {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.signatureGrid {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.signatureBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.signatureLine {
+  height: 2.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.signatureLabel {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .invoiceFooter {
   margin-top: 0.8rem;
   border-top: 1px solid var(--border);

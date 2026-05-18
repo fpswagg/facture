@@ -43,7 +43,12 @@
     "terms": "Conditions",
     "termsPlaceholder": "Conditions de paiement ou mentions légales",
     "paymentDetails": "Modalités de paiement",
-    "paymentDetailsPlaceholder": "IBAN, Wise, PayPal, délai de virement…"
+    "paymentDetailsPlaceholder": "IBAN, Wise, PayPal, délai de virement…",
+    "signatures": "Signatures",
+    "showClientSignature": "Ligne de signature client",
+    "showClientSignatureTooltip": "Affiche une ligne de signature pour le client sur la facture imprimée.",
+    "showMySignature": "Ma ligne de signature",
+    "showMySignatureTooltip": "Affiche votre ligne de signature sur la facture imprimée."
   },
   "lineItems": {
     "title": "Prestations",
@@ -59,6 +64,7 @@
     "descriptionPlaceholder": "Description (optionnel)",
     "autoFromChildren": "auto depuis enfants",
     "addChild": "+ Ajouter une sous-prestation",
+    "clearChildren": "Aplatir",
     "duplicate": "Dupliquer",
     "moveUp": "Monter",
     "moveDown": "Descendre",
@@ -83,7 +89,9 @@
     "portfolio": "Portfolio / site web",
     "fallbackService": "Prestation",
     "fallbackChildService": "Sous-prestation",
-    "groupTag": "groupe"
+    "groupTag": "groupe",
+    "clientSignature": "Signature du client",
+    "mySignature": "Signature autorisée"
   },
   "actions": {
     "title": "Actions",
@@ -130,6 +138,7 @@
     "moveLineUp": "Déplacer la ligne vers le haut",
     "moveLineDown": "Déplacer la ligne vers le bas",
     "deleteLine": "Supprimer la ligne",
+    "clearChildren": "Supprimer les lignes enfants et conserver le total parent",
     "portfolioQr": "Code QR du portfolio"
   }
 }

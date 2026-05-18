@@ -43,7 +43,12 @@
     "terms": "Terms",
     "termsPlaceholder": "Payment terms or legal notes",
     "paymentDetails": "Payment details",
-    "paymentDetailsPlaceholder": "IBAN, Wise, PayPal, wire instructions…"
+    "paymentDetailsPlaceholder": "IBAN, Wise, PayPal, wire instructions…",
+    "signatures": "Signatures",
+    "showClientSignature": "Client signature line",
+    "showClientSignatureTooltip": "Show a signature line for the client on the printed invoice.",
+    "showMySignature": "My signature line",
+    "showMySignatureTooltip": "Show your signature line on the printed invoice."
   },
   "lineItems": {
     "title": "Services",
@@ -59,6 +64,7 @@
     "descriptionPlaceholder": "Description (optional)",
     "autoFromChildren": "auto from children",
     "addChild": "+ Add sub-service",
+    "clearChildren": "Flatten",
     "duplicate": "Duplicate",
     "moveUp": "Up",
     "moveDown": "Down",
@@ -83,7 +89,9 @@
     "portfolio": "Portfolio / website",
     "fallbackService": "Service",
     "fallbackChildService": "Sub-service",
-    "groupTag": "group"
+    "groupTag": "group",
+    "clientSignature": "Client signature",
+    "mySignature": "Authorized signature"
   },
   "actions": {
     "title": "Actions",
@@ -130,6 +138,7 @@
     "moveLineUp": "Move line up",
     "moveLineDown": "Move line down",
     "deleteLine": "Delete line",
+    "clearChildren": "Remove all child lines and keep parent total",
     "portfolioQr": "Portfolio QR code"
   }
 }

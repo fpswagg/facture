@@ -48,6 +48,8 @@ const formSchema = z
     notes: z.string(),
     terms: z.string(),
     paymentDetails: z.string(),
+    showClientSignature: z.boolean().optional(),
+    showMySignature: z.boolean().optional(),
   })
   .passthrough();
 
@@ -125,6 +127,8 @@ const normalizeForm = (raw: z.infer<typeof formSchema>): InvoiceFormValues => ({
   notes: raw.notes ?? "",
   terms: raw.terms ?? "",
   paymentDetails: raw.paymentDetails ?? "",
+  showClientSignature: raw.showClientSignature ?? false,
+  showMySignature: raw.showMySignature ?? false,
 });
 
 const ensureLineIds = (items: LineItemInput[]): LineItemInput[] =>

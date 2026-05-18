@@ -18,6 +18,8 @@ export const InvoiceForm = ({ form }: InvoiceFormProps) => {
 
   const showClient = watch("showClient");
   const showDueDate = watch("showDueDate");
+  const showClientSignature = watch("showClientSignature");
+  const showMySignature = watch("showMySignature");
 
   return (
     <section className="panel">
@@ -139,6 +141,30 @@ export const InvoiceForm = ({ form }: InvoiceFormProps) => {
         {t("form.paymentDetails")}
         <textarea rows={3} {...register("paymentDetails")} placeholder={t("form.paymentDetailsPlaceholder")} />
       </label>
+
+      <h4 className="sectionHeading">{t("form.signatures")}</h4>
+      <div className="clientToggle">
+        <label className="toggleLabel">
+          <input
+            type="checkbox"
+            checked={showClientSignature}
+            onChange={(event) => setValue("showClientSignature", event.target.checked)}
+          />
+          {t("form.showClientSignature")}
+        </label>
+        <Tooltip label="?" text={t("form.showClientSignatureTooltip")} />
+      </div>
+      <div className="clientToggle">
+        <label className="toggleLabel">
+          <input
+            type="checkbox"
+            checked={showMySignature}
+            onChange={(event) => setValue("showMySignature", event.target.checked)}
+          />
+          {t("form.showMySignature")}
+        </label>
+        <Tooltip label="?" text={t("form.showMySignatureTooltip")} />
+      </div>
     </section>
   );
 };

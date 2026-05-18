@@ -18,4 +18,6 @@ export const getDefaultFormValues = (t: TFunction, language: string): InvoiceFor
   notes: t("defaults.notes"),
   terms: t("defaults.terms"),
   paymentDetails: t("defaults.paymentDetails"),
+  showClientSignature: false,
+  showMySignature: false,
 });
